@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+html,body{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+header, footer{
+  color: white;
+  background-color: #1976D2 ;
+  grid-column: span 2;
+} 
+
+aside{
+  color: #212121;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 2;
+  row-gap: 2px;
+  
+}
+
+main{
+  grid-gap: 4px;
+  background-color: gainsboro;
+  color: white;
+  max-width: 100%;
+}
