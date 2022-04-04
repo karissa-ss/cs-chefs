@@ -15,7 +15,7 @@ header, footer{
   grid-column: span 2;
 } 
 
-aside{
+.navigation{
   color: #212121;
   background-color: white;
   display: grid;
