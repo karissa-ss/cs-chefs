@@ -30,3 +30,17 @@ main{
   color: white;
   max-width: 100%;
 }
+
+.card {
+  content-visibility: auto;
+  position: relative;
+  display: grid;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: var(--secondary);
+  grid-template-rows: 5fr 1fr;
+  padding:0;
+  align-items: stretch;
+  align-content: stretch;
+  border-radius: 5px;
+}
