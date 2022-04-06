@@ -31,10 +31,8 @@ main{
 display: grid;
 grid-gap: 4px;
 background-color: gainsboro;
-scroll-snap-type: y mandatory;
+grid-template-columns: 1fr 1fr 1fr 1fr;
 overflow-y: scroll;
-grid-template-columns: 2fr 2fr 2fr 2fr;
-grid-template-rows: 5fr 5fr;
 max-width: 100%;
 }
 
@@ -43,6 +41,7 @@ display: grid;
 background-color: #FFFFFF;
 grid-template-rows: 1fr 8fr 1fr;
 grid-template-columns: 1fr 8fr;
+
 }
 
 /* 
@@ -78,11 +77,11 @@ display: grid;
 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 transition: 0.3s;
 background-color: var(--secondary);
-grid-template-rows: 5fr 2fr;
+grid-template-rows: 5fr 5fr;
 padding:0;
+border-radius: 5px;
 align-items: stretch;
 align-content: stretch;
-border-radius: 5px;
 grid-column: span 1;
 }
 
