@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  padding: 1em;
+  padding: 15px;
 }
 
 html,body{
@@ -10,16 +10,30 @@ margin: 0;
 }
 
 header, footer{
-color: white;
+color: black;
 background-color: #8ee2c9 ;
 grid-column: span 2;
+height: fit-content;
 } 
 
+/* footer{
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+} */
+
 aside{
-display: grid;
-color: #212121;
-background-color: transparent;
-grid-row: span 1;
+  background-color: transparent;
+  height: fit-content;
+}
+
+.navigation{
+  position: relative;
+  display: grid;
+  color: #212121;
+  background-color: transparent;
+  text-align: center;
+  grid-row: span 1;
 }
 
 section{
@@ -44,7 +58,6 @@ background-attachment: fixed;
 background-size: cover;
 grid-template-rows: 1fr 8fr 1fr;
 grid-template-columns: 1fr 8fr;
-/* background-color: rgb(175, 240, 175); */
 }
 
 /* 
@@ -67,10 +80,6 @@ box-shadow: 0 10px 16px 0 rgba(0,0,0,0.4);
 --primary: blue;
 --secondary: #b997bf;
 --background:  gainsboro;
-}
-
-section{
-color: rgb(216, 204, 204);
 }
 
 .card {
