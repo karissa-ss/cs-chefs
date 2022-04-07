@@ -4,26 +4,21 @@
 }
 
 html,body{
-height: 100%;
-padding: 0;
-margin: 0;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 header, footer{
-color: black;
-background-color: #8ee2c9 ;
-grid-column: span 2;
-height: fit-content;
+  color: black;
+  background-color: #8ee2c9 ;
+  grid-column: span 2;
+  height: fit-content;
 } 
 
-/* footer{
-  bottom: 0;
-  width: 100%;
-  position: fixed;
-} */
-
 aside{
-  background-color: transparent;
+  
+  background-color: blueviolet;
   height: fit-content;
 }
 
@@ -37,27 +32,26 @@ aside{
 }
 
 section{
-background-color: #dfd9db;
-color: white;
+  background-color: #dfd9db;
+  color: white;
 }
 
 main{
-display: grid;
-grid-gap: 4px;
-background-color: transparent;
-grid-template-columns: 1fr 1fr 1fr 1fr;
-overflow-y: scroll;
-max-width: 100%;
+  display: grid;
+  grid-gap: 4px;
+  background-color: transparent;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  overflow-y: scroll;
+  max-width: 100%;
 }
 
 body{
-display: grid;
-background-image: url('light1.jpg');
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;
-grid-template-rows: 1fr 8fr 1fr;
-grid-template-columns: 1fr 8fr;
+  display: grid;
+  background-image: url('light1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  grid-template-columns: 1fr 8fr;
 }
 
 /* 
@@ -73,29 +67,29 @@ font: 2em 'Libre Franklin', sans-serif;
 } */
 
 .card:hover {
-box-shadow: 0 10px 16px 0 rgba(0,0,0,0.4);
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.4);
 }
 
 :root{
---primary: blue;
---secondary: #b997bf;
---background:  gainsboro;
+  --primary: blue;
+  --secondary: #b997bf;
+  --background:  gainsboro;
 }
 
 .card {
-content-visibility: auto;
-position: relative;
-display: grid;
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-transition: 0.3s;
-background-color: var(--secondary);
-grid-template-rows: 5fr 5fr;
-height: 250px;
-padding:0;
-border-radius: 5px;
-align-items: stretch;
-align-content: stretch;
-grid-column: span 1;
+  content-visibility: auto;
+  position: relative;
+  display: grid;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: var(--secondary);
+  grid-template-rows: 5fr 5fr;
+  height: 250px;
+  padding:0;
+  border-radius: 5px;
+  align-items: stretch;
+  align-content: stretch;
+  grid-column: span 1;
 }
 
 @media screen and (max-width: 600px) {
