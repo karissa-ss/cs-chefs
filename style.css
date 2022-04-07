@@ -9,6 +9,15 @@ html,body{
   margin: 0;
 }
 
+p, li{
+  padding: 0;
+  margin: 0;
+}
+
+ul, h3{
+  margin: 0;
+}
+
 header, footer{
   color: black;
   background-color: var(--secondary) ;
@@ -58,7 +67,7 @@ body{
 :root{
   --primary: rgb(200, 176, 230);
   --secondary: #8ee2c9;
-  --background:  rgba(234, 233, 205, 0.96);
+  --background:  rgb(231, 224, 210);
 }
 
 .card {
@@ -75,7 +84,7 @@ body{
   grid-column: span 1;
 }
 
-button{
+.navigation button{
   background-color: var(--secondary);
   border-radius: 20px;
 }
@@ -84,8 +93,43 @@ a{
   padding: 0;
 }
 
+h1{
+  text-align: center;
+}
+
 button:hover {
   box-shadow: 0 10px 16px 0 rgba(0,0,0,0.4);
+}
+
+#recipe{
+  background-color:transparent;
+  grid-column: span 1;
+  margin: 50px;
+}
+
+.dish{
+ background-color: var(--background);
+  
+  text-align: left;
+  overflow-y: scroll;
+}
+
+.ingredients{
+  float: left;
+  width: auto;
+}
+
+.nutrition{
+  float: right;
+  width: auto;
+  text-align: center;
+  border: solid;
+  border-width: 1px;
+}
+
+.directions{
+  float: left;
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {
