@@ -27,79 +27,65 @@
         </nav>
     </aside>
     <main>
-    <article class="card">
-        <p class="title">Dish 0 Name</p>
-        <!-- <img src=""> -->
-    </article>
-    <article class="card">
-        <p class="title">Dish 1 Name</p>
-        <!-- <img src=""> -->
-    </article>
-    <article class="card">
-        <p class="title">Dish 2 Name</p>
-        <!-- <img src=""> -->
-    </article>
-     <article class="card">
-        <p class="title">Dish 3 Name</p>
-        <img src="">
-    </article>
-    <article class="card">
-        <p class="title">Dish 4 Name</p>
-        <img src="">
-    </article>
-    <article class="card">
-        <p class="title">Dish 5 Name</p>
-        <img src="">
-    </article>
-    <article class="card">
-        <p class="title">Dish 0 Name</p>
-        <img src="">
-    </article>
-    <article class="card">
-        <p class="title">Dish 1 Name</p>
-        <img src="">
-    </article>
-    <article class="card">
-        <p class="title">Dish 2 Name</p>
-        <img src="">
-    </article>
-    <article class="card">
-        <p class="title">Dish 3 Name</p>
-        <img src="">
-    </article>
-    <article class="card">
-        <p class="title">Dish 4 Name</p>
-        <img src="">
-    </article>
-    <article class="card">
-        <p class="title">Dish 5 Name</p>
-        <img src="">
-    </article>
-    <article class="card">
-        <p class="title">Dish 0 Name</p>
-        <img src="">
-    </article>
-    <article class="card">
-        <p class="title">Dish 1 Name</p>
-        <img src="">
-    </article>
-    <article class="card">
-        <p class="title">Dish 2 Name</p>
-        <img src="">
-    </article>
-    <article class="card">
-        <p class="title">Dish 3 Name</p>
-        <img src="">
-    </article>
-    <article class="card">
-        <p class="title">Dish 4 Name</p>
-        <img src="">
-    </article>
-    <article class="card">
-        <p class="title">Dish 5 Name</p>
-        <img src="">
-    </article>
+        <div id="overlay" onclick="off()">
+            <div id="recipe">
+                <article class="details">
+                    <h1>Cheese Sandwich</h1>
+                    <div class="nutrition">
+                        <h3>nutrition</h3>
+                        <p>Calories: 20g</p>
+                        <p>Carbohydrates: 100g</p>
+                    </div>           
+                    <div class="ingredients">
+                        <h2>Ingredients</h2>
+                        <ul>
+                            <li>Bread</li>
+                            <li>Cheese</li>
+                        </ul>
+                    </div>
+                    <div class="directions">
+                        <h2>Directions</h2>
+                        <ol>
+                            <li>Cut Slices of cheese.</li>
+                            <li>Place slices of cheese between bread slices.</li>
+                        </ol>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <article class="card" onclick="on()">
+            <p class="title">Dish 0 Name</p>
+            <!-- <img src=""> -->
+        </article>
+        <article class="card" onclick="on()">
+            <p class="title">Dish 1 Name</p>
+            <!-- <img src=""> -->
+        </article>
+        <article class="card" onclick="on()">
+            <p class="title">Dish 2 Name</p>
+            <!-- <img src=""> -->
+        </article>
+        <article class="card" onclick="on()">
+            <p class="title">Dish 3 Name</p>
+            <!-- <img src=""> -->
+        </article>
+        <article class="card" onclick="on()">
+            <p class="title">Dish 4 Name</p>
+            <!-- <img src=""> -->
+        </article>
+        <article class="card" onclick="on()">
+            <p class="title">Dish 5 Name</p>
+            <!-- <img src=""> -->
+        </article>
 </main>
+<script>
+    function on(){
+        document.getElementById("overlay").style.display = "block";
+    }
+    function off() {
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
 </body>
 <footer>Hello. I am the footer.</footer>
 </html>
