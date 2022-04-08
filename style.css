@@ -95,7 +95,6 @@ body{
   background-color: var(--background);
   height: 300px;
   padding:0;
-  
   align-items: stretch;
   align-content: stretch;
   border-radius: 5px;
@@ -109,6 +108,12 @@ body{
 button:hover {
   box-shadow: 0 10px 16px 0 rgba(0,0,0,0.4);
 }
+input[type=submit]{
+  background-color: var(--secondary);
+  border-radius: 5px;
+  float: right;
+  bottom: 0;
+}
 
 #recipe{
   background-color:var(--background);
@@ -116,6 +121,31 @@ button:hover {
   margin: 100px 270px 100px 270px;
   height: auto;
   overflow-y: auto;
+}
+
+.feedbackForm{
+  background-color:var(--background);
+  grid-column: span 4;
+  margin: 80px 200px 80px 200px;
+  height: auto;
+  width: auto;
+  overflow-y: auto;
+}
+
+form{
+  float: right;
+  width: auto; 
+  border: solid black 2px;
+}
+
+.formInstructions{
+  float: left;
+  width: auto;
+}
+
+form label{
+  padding: 15px;
+  display: inline-block;
 }
 
 .details{
@@ -179,7 +209,7 @@ body{
 }
 
 .card{
-  grid-column: span 2;
+  grid-column: span 4;
 }
 
 }
