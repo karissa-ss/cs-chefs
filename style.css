@@ -19,6 +19,7 @@ p, ul, ol, li, h1, h2, h3{
 
 h1{
   text-align: center;
+  width: auto;
 }
 
 header, footer{
@@ -29,6 +30,10 @@ header, footer{
 
 header{
   text-align: center;
+}
+
+header h1{
+  float: left;
 }
 
 aside{
@@ -196,6 +201,14 @@ form label{
 
 .title{
   padding: 0 0 0 5px;
+}
+
+#searchBar{
+  float: right;
+  display: inline-block;
+  width: auto;
+  z-index: 2;
+  top: 0;
 }
 
 @media screen and (max-width: 600px) {
