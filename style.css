@@ -19,7 +19,7 @@ p, ul, ol, li, h1, h2, h3{
 
 h1{
   text-align: center;
-  width: auto;
+  width: fit-content;
 }
 
 header, footer{
@@ -29,25 +29,29 @@ header, footer{
 } 
 
 header{
-  text-align: center;
+  text-align: left;
 }
 
 header h1{
   float: left;
 }
 
-aside{
-  background-color: transparent;
-  height: fit-content;
-}
-
 .navigation{
-  position: relative;
   display: grid;
   color: #212121;
-  border-style: double;
-  border-width: 5px;
   row-gap: 10px;
+  position: relative;
+  z-index: 1;
+  height: 600px;
+}
+
+.navigation button{
+  background-color: var(--secondary);
+  border-radius: 20px;
+}
+
+.navigation a{
+  display: grid;
 }
 
 main{
@@ -105,14 +109,11 @@ body{
   border-radius: 5px;
 }
 
-.navigation button{
-  background-color: var(--secondary);
-  border-radius: 20px;
-}
 
 button:hover {
   box-shadow: 0 10px 16px 0 rgba(0,0,0,0.4);
 }
+
 input[type=submit]{
   background-color: var(--secondary);
   border-radius: 5px;
@@ -206,7 +207,6 @@ form label{
 #searchBar{
   float: right;
   width: auto;
-  z-index: 2;
   top: 0;
 }
 
@@ -244,6 +244,48 @@ body{
 
 .card{
   grid-column: span 4;
+}
+
+
+.navigation{
+  overflow: hidden;
+  display: inline;
+}
+
+
+main{
+  height: 100vh;
+}
+
+footer{
+  height: 25px;
+  position: relative;
+  bottom: 0;
+}
+
+.feedbackForm{
+  width: 100%;
+  margin: 0;
+}
+
+#recipe{
+  margin: 0;
+}
+}
+
+@media screen and (max-width:950px) {
+
+#recipe{
+  margin: 10px;
+}
+
+.card{
+  grid-column: span 2;
+}
+
+.feedbackForm{
+  width: 80%;
+  margin: 10%;
 }
 
 }

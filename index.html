@@ -18,19 +18,19 @@
     </div>
 </header>    
 <body>
-    <aside>
-        <nav class="navigation"> <!-- create nav class to style navigation bar--> 
-            <img src="image">
-            <a href="index.html"><button>Home</button></a>
-            <a href="breakfast.html"><button>Breakfast</button></a>
-            <a href="lunch.html"><button>Lunch</button></a> 
-            <a href="lunch.html"><button>Dinner</button></a> 
-            <a href="tips.html"><button>Tips & Techniques</button></a> 
-            <a href="ingredientSearch.html"><button>Search by Ingredient</button></a>
-            <a href="feedback.html"><button>Feedback</button></a>  
-        </nav>
-    </aside>
-    <main>
+<aside>
+    <div  id="sidebar" class="navigation"> <!-- create nav class to style navigation bar--> 
+        <img src="image">
+        <a href="index.html"><button>Home</button></a>
+        <a href="breakfast.html"><button>Breakfast</button></a>
+        <a href="lunch.html"><button>Lunch</button></a> 
+        <a href="lunch.html"><button>Dinner</button></a> 
+        <a href="tips.html"><button>Tips & Techniques</button></a> 
+        <a href="ingredientSearch.html"><button>Search by Ingredient</button></a>
+        <a href="feedback.html"><button>Feedback</button></a>  
+    </div>
+</aside>
+    <main>  
     <div id="overlay" onclick="off()">
         <div id="recipe">
             <article class="details">
@@ -91,6 +91,7 @@
         function off() {
             document.getElementById("overlay").style.display = "none";
         }
+
     </script>
 </body>
 <footer>Hello. I am the footer.</footer>
