@@ -73,7 +73,7 @@ body{
 }
 
 :root{
-  --primary: rgb(200, 176, 230);
+  --primary: rgb(130, 169, 194);
   --secondary: #8ee2c9;
   --background:  #e3cfc9;
 }
@@ -205,10 +205,31 @@ form label{
 
 #searchBar{
   float: right;
-  display: inline-block;
   width: auto;
   z-index: 2;
   top: 0;
+}
+
+#enterIngredient{
+  background-color: var(--background);
+  grid-column: span 4;
+  grid-row: span 1;
+  height: max-content;
+  overflow-x: scroll;
+  /* display: inline-block;
+  vertical-align: middle; */
+}
+
+#enterIngredient button[type="submit"]{
+  color: var(--secondary);
+  font-weight: bold;
+  background-color: black;
+}
+
+#ingredientItem{
+  border-radius: 16px;
+  background-color: var(--primary);
+  padding: 10px;
 }
 
 @media screen and (max-width: 600px) {

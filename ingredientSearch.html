@@ -11,11 +11,7 @@
     <!-- Since most of the content comes from somewhere else there's not much here besides containers -->
 <header> 
     <!-- <img src="logo.jpg"> -->
-    <h1>CS Chefs</h1>
-    <div id="searchBar">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </div>
+    <h1>Search by Ingredient</h1>
 </header>    
 <body>
     <aside>
@@ -24,13 +20,20 @@
             <img src="image">
             <a href="index.html"><button>Home</button></a>
             <a href="breakfast.html"><button>Breakfast</button></a>
-            <a href="index.html"><button>Lunch</button></a>
-            <a href="index.html"><button>Dinner</button></a> 
-            <a href="index.html"><button>Tips & Techniques</button></a> 
-            <a href="index.html"><button>Feedback</button></a>    
+            <a href="lunch.html"><button>Lunch</button></a> 
+            <a href="lunch.html"><button>Dinner</button></a> 
+            <a href="tips.html"><button>Tips & Techniques</button></a> 
+            <a href="ingredientSearch.html"><button>Search by Ingredient</button></a>
+            <a href="feedback.html"><button>Feedback</button></a>      
         </nav>
     </aside>
     <main>
+        <div id="enterIngredient">
+            <input type="text" placeholder="Enter Ingredient...">
+            <button type="submit">Enter</button>
+            <button id="ingredientItem">Egg</button>  
+            <button id="ingredientItem">Strawberry</button>
+        </div>
         <div id="overlay" onclick="off()">
             <div id="recipe">
                 <article class="details">
@@ -82,15 +85,7 @@
             <img src="cake_slices.jpg">
             <p class="title">Dish 5 Name</p>
         </article>
-</main>
-<script>
-    function on(){
-        document.getElementById("overlay").style.display = "block";
-    }
-    function off() {
-        document.getElementById("overlay").style.display = "none";
-    }
-</script>
+    </main>
 </body>
 <footer>Hello. I am the footer.</footer>
 </html>
