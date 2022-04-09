@@ -215,9 +215,7 @@ form label{
   grid-column: span 4;
   grid-row: span 1;
   height: max-content;
-  overflow-x: scroll;
-  /* display: inline-block;
-  vertical-align: middle; */
+  width: fit-content;
 }
 
 #enterIngredient button[type="submit"]{
@@ -230,6 +228,8 @@ form label{
   border-radius: 16px;
   background-color: var(--primary);
   padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 600px) {
