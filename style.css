@@ -118,6 +118,8 @@ body{
 
 button:hover {
   box-shadow: 0 10px 16px 0 rgba(0,0,0,0.4);
+  cursor: pointer;
+  font-size: 15px;
 }
 
 input[type=submit]{
@@ -163,6 +165,11 @@ form label{
 .details{
   text-align: left;
   height: auto;
+}
+
+.details h1{
+  width: 100%;
+  text-align: center;
 }
 
 .details img{
@@ -236,6 +243,33 @@ form label{
   padding: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.tip{
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: auto;
+  grid-column: span 4;
+  height: fit-content;
+  background-color: transparent;
+  margin: 0;
+  grid-gap: 10px;
+}
+
+.techniqueDetail{
+  background-color: var(--primary);
+  font-weight: 500;
+  font-size: 16px;
+  display: none;
+}
+
+.tip button{
+  background-color: var(--background);
+  font-size: 20px;
+}
+
+.tip button:hover + .techniqueDetail{
+  display: block;
 }
 
 @media screen and (max-width: 600px) {
