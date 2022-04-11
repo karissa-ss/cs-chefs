@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css"> 
-    <link href="script.js"> 
+    <script src="script.js"></script>
     <title>CS Chefs</title> <!--todo change css and js links-->
 </head>
     <!-- Since most of the content comes from somewhere else there's not much here besides containers -->
@@ -33,14 +33,14 @@
             <button id="ingredientItem">Egg</button>  
             <button id="ingredientItem">Strawberry</button>
         </div>
-        <div id="overlay" onclick="off()">
+        <div id="overlay" onclick="hideRecipe()">
             <div id="recipe">
                 <article class="details">
                     <img src="cake_slices.jpg">
                     <h1>Cheese Sandwich</h1>
                     <div class="nutrition">
                         <h3>nutrition</h3>
-                        <p>Calories: 20g</p>
+                        <p>Calories: 200</p>
                         <p>Carbohydrates: 100g</p>
                     </div>           
                     <div class="ingredients">
@@ -60,29 +60,10 @@
                 </article>
             </div>
         </div>
-        <article class="card" onclick="on()">
+        <!-- DISPLAY ITEMS HERE -->
+        <article class="card" onclick="viewRecipe()">
             <img src="cake_slices.jpg">
             <p class="title">Dish 0 Name</p>
-        </article>
-        <article class="card" onclick="on()">
-            <img src="cake_slices.jpg">
-            <p class="title">Dish 1 Name</p>
-        </article>    
-        <article class="card" onclick="on()">
-            <img src="cake_slices.jpg">
-            <p class="title">Dish 2 Name</p>
-        </article>    
-        <article class="card" onclick="on()">
-            <img src="cake_slices.jpg">
-            <p class="title">Dish 3 Name</p>
-        </article>    
-        <article class="card" onclick="on()">
-            <img src="cake_slices.jpg">
-            <p class="title">Dish 4 Name</p>
-        </article>    
-        <article class="card" onclick="on()">
-            <img src="cake_slices.jpg">
-            <p class="title">Dish 5 Name</p>
         </article>
     </main>
 </body>

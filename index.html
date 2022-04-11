@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css"> 
-    <link href="script.js"> 
-    <title>CS Chefs</title> <!--todo change css and js links-->
+    <script src="script.js"></script>
+    <title>CS Chefs</title>
 </head>
     <!-- Since most of the content comes from somewhere else there's not much here besides containers -->
 <header> 
@@ -18,7 +18,7 @@
 </header>    
 <body>
 <aside>
-    <div  id="sidebar" class="navigation"> <!-- create nav class to style navigation bar--> 
+    <div  id="sidebar" class="navigation">
         <img src="logo.png">
         <a href="index.html"><button>Home</button></a>
         <a href="breakfast.html"><button>Breakfast</button></a>
@@ -30,7 +30,7 @@
     </div>
 </aside>
     <main>  
-    <div id="overlay" onclick="off()">
+    <div id="overlay" onclick="hideRecipe()">
         <div id="recipe">
             <article class="details">
                 <img src="cake_slices.jpg">
@@ -57,41 +57,31 @@
             </article>
         </div>
     </div>
-    <article class="card" onclick="on()">
+    <article class="card" onclick="viewRecipe()">
         <img src="cake_slices.jpg">
         <p class="title">Dish 0 Name</p>
     </article>
-    <article class="card" onclick="on()">
+    <article class="card" onclick="viewRecipe()">
         <img src="cake_slices.jpg">
         <p class="title">Dish 1 Name</p>
     </article>    
-    <article class="card" onclick="on()">
+    <article class="card" onclick="viewRecipe()">
         <img src="cake_slices.jpg">
         <p class="title">Dish 2 Name</p>
     </article>    
-    <article class="card" onclick="on()">
+    <article class="card" onclick="viewRecipe()">
         <img src="cake_slices.jpg">
         <p class="title">Dish 3 Name</p>
     </article>    
-    <article class="card" onclick="on()">
+    <article class="card" onclick="viewRecipe()">
         <img src="cake_slices.jpg">
         <p class="title">Dish 4 Name</p>
     </article>    
-    <article class="card" onclick="on()">
+    <article class="card" onclick="viewRecipe()">
         <img src="cake_slices.jpg">
         <p class="title">Dish 5 Name</p>
     </article>
 </main>
-   
-    <script>
-        function on(){
-            document.getElementById("overlay").style.display = "block";
-        }
-        function off() {
-            document.getElementById("overlay").style.display = "none";
-        }
-
-    </script>
 </body>
 <footer>Hello. I am the footer.</footer>
 </html>
