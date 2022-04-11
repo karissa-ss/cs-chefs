@@ -305,7 +305,7 @@ main{
 
 footer{
   height: 25px;
-  position: center;
+  position: relative;
   bottom: 0;
 }
 
