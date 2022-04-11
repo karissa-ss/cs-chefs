@@ -305,9 +305,8 @@ main{
 
 footer{
   height: 25px;
-  position: relative;
+  position: center;
   bottom: 0;
-  text-align: center;
 }
 
 .feedbackForm{
