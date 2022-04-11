@@ -141,27 +141,35 @@ input[type=submit]{
   background-color:var(--background);
   grid-column: span 4;
   margin: 80px 200px 80px 200px;
-  height: auto;
-  width: auto;
+  /* height: auto;
+  width: auto; */
   overflow-y: auto;
+  
 }
 
 form{
-  float: right;
-  width: auto; 
+  width: 100%; 
   border: solid black 2px;
+  text-align: justify;
 }
 
 .formInstructions{
-  float: left;
   width: auto;
 }
 
-form label{
-  padding: 15px;
-  display: inline-block;
+label{
+  padding: 16px;
+  display: block;
+  text-align: justify;
 }
 
+form input[type=name], form input[type=email]{
+  width: 50%;
+}
+
+form textarea{
+  width: 80%;
+}
 .details{
   text-align: left;
   height: auto;
@@ -304,6 +312,10 @@ footer{
 .feedbackForm{
   width: 100%;
   margin: 0;
+}
+
+form input[type=name], form input[type=email], textarea{
+  width: 100%;
 }
 
 #recipe{
