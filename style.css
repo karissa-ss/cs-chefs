@@ -25,7 +25,7 @@ h1{
 }
 
 header, footer{
-  color: black;
+  color: #B73535;
   background-color: var(--secondary) ;
   grid-column: span 2;
 } 
@@ -40,7 +40,7 @@ header img{
 
 .navigation{
   display: grid;
-  color: #212121;
+  color: #9ED9C5;
   row-gap: 10px;
   position: relative;
   z-index: 1;
@@ -84,9 +84,9 @@ body{
 }
 
 :root{
-  --primary: rgb(130, 169, 194);
-  --secondary: #8ee2c9;
-  --background:  #e3cfc9;
+  --primary: #C7F2E3;
+  --secondary: #9ED9C5;
+  --background:  #EEDDD2;
 }
 
 .card img{
