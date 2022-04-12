@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css"> 
-    <script src="script.js"></script>
+    
     <title>CS Chefs</title>
 </head>
     <!-- Since most of the content comes from somewhere else there's not much here besides containers -->
@@ -35,7 +35,35 @@
         <a href="feedback.html"><button>Feedback</button></a>  
     </div>
 </aside>
-    <main>  
+    <main>
+        <div class="slideshow">
+            <div class="slide">
+                <img src="slideshow/img1.jpg">
+                <div class="text">Breakfast</div>
+            </div>
+            <div class="slide">
+                <img src="slideshow/img2.jpg">
+                <div class="text">Lunch</div>
+            </div>
+            <div class="slide">
+                <img src="slideshow/img3.jpg">
+                <div class="text">Dinner</div>
+            </div>
+            <div class="slide">
+                <img src="slideshow/img4.jpeg">
+                <div class="text">Breakfast</div>
+            </div>
+            <div class="slide">
+                <img src="slideshow/img5.jpg">
+                <div class="text">Lunch</div>
+            </div>
+            <div class="slide">
+                <img src="slideshow/img6.jpg">
+                <div class="text">Dinner</div>
+            </div>           
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
     <div id="overlay" onclick="hideRecipe()">
         <div id="recipe">
             <article class="details">
@@ -88,6 +116,7 @@
         <p class="title">Dish 5 Name</p>
     </article>
 </main>
+<script src="script.js"></script>
 </body>
 <footer>CS Chefs© 2022</footer>
 </html>
