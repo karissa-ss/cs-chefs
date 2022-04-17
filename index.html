@@ -18,14 +18,14 @@
 <header> 
     <img src="logo.png">
     <div id="searchBar">
-        <input type="text" placeholder="Search.." name="search" style="background-color: #eeddd2;">
-        <button type="submit" style="background-color: #eeddd2;">Search</button>
+        <input type="text" id="searchInput" placeholder="Search.." name="search" style="background-color: #eeddd2;">
+        <button type="submit" onclick="loadRecipies()" style="background-color: #eeddd2;">Search</button>
     </div>
 </header>    
 <body>
 <aside>
     <div  id="sidebar" class="navigation">
-        <img src="logo.png" onclick="loadRecipies()">
+        <img src="logo.png">
         <a href="index.html"><button>Home</button></a>
         <a href="breakfast.html"><button>Breakfast</button></a>
         <a href="lunch.html"><button>Lunch</button></a> 
@@ -89,11 +89,8 @@
             </article>
         </div>
     </div>
-    <div id="randomCards">
-        <article class="card" onclick="viewRecipe()">
-            <img src="cake_slices.jpg">
-            <p class="title">Dish 0 Name</p>
-        </article>
+    <div id="displayCards">
+
     </div>
 </main>
 <script src="script.js"></script>

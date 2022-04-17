@@ -13,8 +13,8 @@
     <!-- <a href="index.html"><img src="logo.png"></a> -->
     <h1>Lunch</h1>
     <div id="searchBar">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit">Search</button>
+        <input type="text" id="searchInput" placeholder="Search.." name="search" style="background-color: #eeddd2;">
+        <button type="submit" onclick="loadRecipies()" style="background-color: #eeddd2;">Search</button>
     </div>
 </header>    
 <body>
@@ -58,11 +58,10 @@
                 </article>
             </div>
         </div>
-        <!-- DISPLAY ITEMS HERE -->
-        <article class="card" onclick="viewRecipe()">
-            <img src="cake_slices.jpg">
-            <p class="title">Dish 0 Name</p>
-        </article>
+        
+        <div id="displayCards">
+            <!-- DISPLAY ITEMS HERE -->
+        </div>
 </main>
 </body>
 <footer>Hello. I am the footer.</footer>

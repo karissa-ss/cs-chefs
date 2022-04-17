@@ -336,7 +336,7 @@ form textarea{
   text-align: center;
 }
 
-#randomCards{
+#displayCards{
   display: grid;
   grid-template-columns: inherit;
   grid-column: span 4;
