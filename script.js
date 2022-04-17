@@ -11,10 +11,6 @@ function hideRecipe() {
 let slideIndex = 0;
 showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -37,7 +33,5 @@ function showSlides(n) {
     slideIndex = 1
   }
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000);
-  // slides[slideIndex-1].style.display = "block";
-  
+  setTimeout(showSlides, 2000);  
 }
