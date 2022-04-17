@@ -141,8 +141,6 @@ input[type=submit]{
   background-color:var(--background);
   grid-column: span 4;
   margin: 80px 200px 80px 200px;
-  /* height: auto;
-  width: auto; */
   overflow-y: auto;
   
 }
@@ -336,6 +334,14 @@ form textarea{
   bottom: 8px;
   width: 100%;
   text-align: center;
+}
+
+#randomCards{
+  display: grid;
+  grid-template-columns: inherit;
+  grid-column: span 4;
+  max-width: 100%;
+  grid-gap: 10px;
 }
 
 @media screen and (max-width: 600px) {

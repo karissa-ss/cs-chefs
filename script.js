@@ -7,17 +7,48 @@ async function loadRecipies(){
   let data=await response.json();
 
   console.log(data);
-  renderData(data);
+  searchResult(data);
 }
 
-function renderData(data){
-let html=`<article class="card" onclick="viewRecipe()">
-<img src=${data.hits[1].recipe.image}>
-<p class="title">${data.hits[1].recipe.label}</p>
-</article>`
-
+function searchResult(data){
+let html=" ";
+  for(let item of data.hits){
+    html+=`<article class="card" onclick="viewRecipe()">
+            <img src=${item.recipe.image}>
+            <p class="title">${item.recipe.label}</p>
+          </article>`
+    recipeInfo(item);
+  }
   document.querySelector("#randomCards").innerHTML=html;
+}
 
+function recipeInfo(data){
+  let details=`<article class="details">
+                <img src=${data.recipe.image}>
+                <h1>${data.recipe.label}</h1>
+                <div class="nutrition">
+                    <h3>nutrition</h3>
+                    <p>Calories: 20g</p>
+                    <p>Carbohydrates: 100g</p>
+                </div>           
+                <div class="ingredients">
+                    <h2>Ingredients</h2>
+                    <ul>
+                        <li>Bread</li>
+                        <li>Cheese</li>
+                    </ul>
+                </div>
+                <div class="directions">
+                    <h2>Directions</h2>
+                    <ol>
+                        <li>Cut Slices of cheese.</li>
+                        <li>Place slices of cheese between bread slices.</li>
+                    </ol>
+                </div>
+              </article>`
+
+
+  console.log(data);
 }
 
 function viewRecipe(){
