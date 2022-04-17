@@ -13,7 +13,7 @@
     footer{
         text-align: center; 
     }
-    </style>
+</style>
     
 <header> 
     <img src="logo.png">
@@ -25,7 +25,7 @@
 <body>
 <aside>
     <div  id="sidebar" class="navigation">
-        <img src="logo.png">
+        <img src="logo.png" onclick="loadRecipies()">
         <a href="index.html"><button>Home</button></a>
         <a href="breakfast.html"><button>Breakfast</button></a>
         <a href="lunch.html"><button>Lunch</button></a> 
@@ -89,30 +89,32 @@
             </article>
         </div>
     </div>
-    <article class="card" onclick="viewRecipe()">
-        <img src="cake_slices.jpg">
-        <p class="title">Dish 0 Name</p>
-    </article>
-    <article class="card" onclick="viewRecipe()">
-        <img src="cake_slices.jpg">
-        <p class="title">Dish 1 Name</p>
-    </article>    
-    <article class="card" onclick="viewRecipe()">
-        <img src="cake_slices.jpg">
-        <p class="title">Dish 2 Name</p>
-    </article>    
-    <article class="card" onclick="viewRecipe()">
-        <img src="cake_slices.jpg">
-        <p class="title">Dish 3 Name</p>
-    </article>    
-    <article class="card" onclick="viewRecipe()">
-        <img src="cake_slices.jpg">
-        <p class="title">Dish 4 Name</p>
-    </article>    
-    <article class="card" onclick="viewRecipe()">
-        <img src="cake_slices.jpg">
-        <p class="title">Dish 5 Name</p>
-    </article>
+    <div id="randomCards">
+        <article class="card" onclick="viewRecipe()">
+            <img src="cake_slices.jpg">
+            <p class="title">Dish 0 Name</p>
+        </article>
+        <article class="card" onclick="viewRecipe()">
+            <img src="cake_slices.jpg">
+            <p class="title">Dish 1 Name</p>
+        </article>    
+        <article class="card" onclick="viewRecipe()">
+            <img src="cake_slices.jpg">
+            <p class="title">Dish 2 Name</p>
+        </article>    
+        <article class="card" onclick="viewRecipe()">
+            <img src="cake_slices.jpg">
+            <p class="title">Dish 3 Name</p>
+        </article>    
+        <article class="card" onclick="viewRecipe()">
+            <img src="cake_slices.jpg">
+            <p class="title">Dish 4 Name</p>
+        </article>    
+        <article class="card" onclick="viewRecipe()">
+            <img src="cake_slices.jpg">
+            <p class="title">Dish 5 Name</p>
+        </article>
+    </div>
 </main>
 <script src="script.js"></script>
 </body>

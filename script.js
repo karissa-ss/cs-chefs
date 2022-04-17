@@ -1,5 +1,24 @@
-let url= "https://www.edamam.com/";
+let url= "https://api.edamam.com/";
 
+async function loadRecipies(){
+  let app_ID="3ef1ffa1";
+  let apiKEY="01ed32d7f78bfefa03baad0adeeda865";
+  let response=await fetch(`${url}search?app_id=${app_ID}&app_key=${apiKEY}&q=pizza`);
+  let data=await response.json();
+
+  console.log(data);
+  renderData(data);
+}
+
+function renderData(data){
+let html=`<article class="card" onclick="viewRecipe()">
+<img src=${data.hits[1].recipe.image}>
+<p class="title">${data.hits[1].recipe.label}</p>
+</article>`
+
+  document.querySelector("#randomCards").innerHTML=html;
+
+}
 
 function viewRecipe(){
     document.getElementById("overlay").style.display = "block";
