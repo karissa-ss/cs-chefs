@@ -1,4 +1,5 @@
 let url= "https://api.edamam.com/";
+let arr=[];
 
 async function loadRecipies(){
   let input=document.getElementById("searchInput").value;
@@ -15,51 +16,77 @@ function searchResult(data){
 let html=" ";
 
   for(let item of data.hits){
-    html+=`<article class="card" onclick="viewRecipe()">
+    // let index=arr.length +1;
+    meal={
+      "id" : arr.length+1,
+      "name" : item.recipe.label,
+      "image" : item.recipe.image,
+      "type" : item.recipe.mealType,
+      "servings" : item.recipe.yield,
+      "nutrition" : item.recipe.totalNutrients,
+      "ingredients" : item.recipe.ingredientLines,
+      "directions" : item.recipe.url
+    };
+
+    html+=`<article class="card" onclick="viewRecipe(${meal.id})">
             <img src=${item.recipe.image}>
             <p class="title">${item.recipe.label}</p>
           </article>`
-
     
+    arr.push(meal);
   }
-  // recipeInfo(data.hits[0]);
-  document.querySelector("#displayCards").innerHTML=html; 
- 
-}
-
-function recipeInfo(data){
-  let details=" ";
-  console.log(data.recipe.label);
-  details=`<article class="details">
-                <img src=${data.recipe.image}>
-                <h1>${data.recipe.label}</h1>
-                <div class="nutrition">
-                    <h3>nutrition</h3>
-                    <p>Calories: 20g</p>
-                    <p>Carbohydrates: 100g</p>
-                </div>           
-                <div class="ingredients">
-                    <h2>Ingredients</h2>
-                    <ul>
-                        <li>Bread</li>
-                        <li>Cheese</li>
-                    </ul>
-                </div>
-                <div class="directions">
-                    <h2>Directions</h2>
-                    <ol>
-                        <li>Cut Slices of cheese.</li>
-                        <li>Place slices of cheese between bread slices.</li>
-                    </ol>
-                </div>
-              </article>`
-
-
   
+  document.querySelector("#displayCards").innerHTML=html; 
 }
 
+function recipeInfo(id){
+  id=id-1;
+  let html="";
+  let ingredients="";
+  
+  html=`<div id="recipe">
+        <article class="details">
+            <img src="${arr[id].image}">
+            <h1>${arr[id].name}</h1>
+            <div class="nutrition">
+              <h3>nutrition</h3>
+              <p id=nutritionValues>
+               
+              </p>
+            </div>
+            <h2>Ingredients</h2>           
+            <div id="ingredients">
+                <ul>
+                </ul>
+            </div>
+            <div class="directions">
+                <h2>Directions</h2>
+                <a href="${arr[id].directions}"><button>Get Directions</button>
+            </div>
+        </article>
+        </div>`
+  
+  for(let item of arr[id].ingredients){
+    ingredients+=`<li>${item}</li>`
+  }
+                
+  nutrition=`Fat: ${arr[id].nutrition.FAT.quantity} ${arr[id].nutrition.FAT.unit}<br>
+            Sugar: ${arr[id].nutrition.SUGAR.quantity} ${arr[id].nutrition.SUGAR.unit}<br>
+            Cholesterol: ${arr[id].nutrition.CHOLE.quantity} ${arr[id].nutrition.CHOLE.unit}<br>
+            Sodium: ${arr[id].nutrition.NA.quantity} ${arr[id].nutrition.NA.unit}<br>
+            Calcium: ${arr[id].nutrition.CA.quantity} ${arr[id].nutrition.CA.unit}`
 
-function viewRecipe(){   
+  document.querySelector("#overlay").innerHTML=html;
+  document.querySelector("#ingredients").innerHTML=ingredients;
+  document.querySelector("#nutritionValues").innerHTML=nutrition;
+}
+
+function lunchRecipies(){
+  // searchResult("lunch");
+}
+
+function viewRecipe(data){   
+    recipeInfo(data);
     document.getElementById("overlay").style.display = "block";
 }
 function hideRecipe() {
