@@ -29,7 +29,23 @@
     <main>
         <div id="enterIngredient">
             <input type="text" id="searchInput" placeholder="Enter Ingredient...">
-            <button type="submit" onclick="loadRecipies()">Enter</button>
+            <select id="filter">
+                <option>vegetarian</option>
+                <option>vegan</option>
+                <option>alcohol-free</option>
+                <option>crustacean-free</option>
+                <option>dairy-free</option>
+                <option>egg-free</option>
+                <option>fish-free</option>
+                <option>gluten-free</option>
+                <option>keto-friendly</option>
+                <option>peanut-free</option>
+                <option>red-meat-free</option>
+                <option>shellfish-free</option>
+                <option>soy-free</option>
+                <option>wheat-free</option>
+            </select>
+            <button type="submit" onclick="filterRecipies()">Enter</button>
         </div>
         <div id="overlay" onclick="hideRecipe()">
       

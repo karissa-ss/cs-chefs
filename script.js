@@ -23,6 +23,7 @@ let html=" ";
       "type" : item.recipe.mealType,
       "servings" : item.recipe.yield,
       "nutrition" : item.recipe.totalNutrients,
+      "health" : item.recipe.healthLabels,
       "ingredients" : item.recipe.ingredientLines,
       "directions" : item.recipe.url
     };
@@ -47,7 +48,7 @@ function recipeInfo(id){
         <article class="details">
             <img src="${arr[id].image}">
             <h1>${arr[id].name}</h1>
-            <p>${arr[id].type}</p>
+            <p>Yield: ${arr[id].servings}</p>
             <div class="nutrition">
               <h3>nutrition</h3>
               <p id=nutritionValues>
@@ -106,9 +107,10 @@ async function dinnerRecipies(){
   searchResult(data); 
 }
 
-async function excludeIngredient(){
+async function filterRecipies(){
   let input=document.getElementById("searchInput").value;
-  let response=await fetch(`${url}/search?app_id=${app_ID}&app_key=${apiKEY}&q=${input}&from=0&to=100`);
+  let filter=document.getElementById("filter").value;
+  let response=await fetch(`${url}/search?app_id=${app_ID}&app_key=${apiKEY}&q=${input}&from=0&to=100&health=${filter}`);
   let data=await response.json();
 
   searchResult(data); 
