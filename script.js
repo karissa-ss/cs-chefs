@@ -1,11 +1,11 @@
-let url= "https://api.edamam.com/";
+let app_ID="3ef1ffa1";
+let apiKEY="01ed32d7f78bfefa03baad0adeeda865";
+let url= "https://api.edamam.com";
 let arr=[];
 
 async function loadRecipies(){
   let input=document.getElementById("searchInput").value;
-  let app_ID="3ef1ffa1";
-  let apiKEY="01ed32d7f78bfefa03baad0adeeda865";
-  let response=await fetch(`${url}search?app_id=${app_ID}&app_key=${apiKEY}&q=${input}`);
+  let response=await fetch(`${url}/search?app_id=${app_ID}&app_key=${apiKEY}&q=${input}&from=0&to=100`);
   let data=await response.json();
 
   console.log(data);
@@ -16,7 +16,6 @@ function searchResult(data){
 let html=" ";
 
   for(let item of data.hits){
-    // let index=arr.length +1;
     meal={
       "id" : arr.length+1,
       "name" : item.recipe.label,
@@ -48,6 +47,7 @@ function recipeInfo(id){
         <article class="details">
             <img src="${arr[id].image}">
             <h1>${arr[id].name}</h1>
+            <p>${arr[id].type}</p>
             <div class="nutrition">
               <h3>nutrition</h3>
               <p id=nutritionValues>
@@ -81,8 +81,37 @@ function recipeInfo(id){
   document.querySelector("#nutritionValues").innerHTML=nutrition;
 }
 
-function lunchRecipies(){
-  // searchResult("lunch");
+
+async function breakfastRecipies(){
+  let input=document.getElementById("searchInput").value;
+  let response=await fetch(`${url}/search?app_id=${app_ID}&app_key=${apiKEY}&q=${input}&from=0&to=100&mealType=breakfast`);
+  let data=await response.json();
+
+  searchResult(data); 
+}
+
+async function lunchRecipies(){
+  let input=document.getElementById("searchInput").value;
+  let response=await fetch(`${url}/search?app_id=${app_ID}&app_key=${apiKEY}&q=${input}&from=0&to=100&mealType=lunch`);
+  let data=await response.json();
+
+  searchResult(data); 
+}
+
+async function dinnerRecipies(){
+  let input=document.getElementById("searchInput").value;
+  let response=await fetch(`${url}/search?app_id=${app_ID}&app_key=${apiKEY}&q=${input}&from=0&to=100&mealType=dinner`);
+  let data=await response.json();
+
+  searchResult(data); 
+}
+
+async function excludeIngredient(){
+  let input=document.getElementById("searchInput").value;
+  let response=await fetch(`${url}/search?app_id=${app_ID}&app_key=${apiKEY}&q=${input}&from=0&to=100`);
+  let data=await response.json();
+
+  searchResult(data); 
 }
 
 function viewRecipe(data){   
