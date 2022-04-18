@@ -27,6 +27,13 @@ let html=" ";
       "ingredients" : item.recipe.ingredientLines,
       "directions" : item.recipe.url
     };
+    
+    meal.nutrition.FAT.quantity=Math.floor(meal.nutrition.FAT.quantity);
+    meal.nutrition.SUGAR.quantity=Math.floor(meal.nutrition.SUGAR.quantity);
+    meal.nutrition.CHOLE.quantity=Math.floor(meal.nutrition.CHOLE.quantity);
+    meal.nutrition.NA.quantity=Math.floor(meal.nutrition.NA.quantity);
+    meal.nutrition.CA.quantity=Math.floor(meal.nutrition.CA.quantity);
+    
 
     html+=`<article class="card" onclick="viewRecipe(${meal.id})">
             <img src=${item.recipe.image}>
@@ -36,6 +43,8 @@ let html=" ";
     arr.push(meal);
   }
   
+  
+
   document.querySelector("#displayCards").innerHTML=html; 
 }
 
@@ -43,7 +52,7 @@ function recipeInfo(id){
   id=id-1;
   let html="";
   let ingredients="";
-  
+  let tag='';
   html=`<div id="recipe">
         <article class="details">
             <img src="${arr[id].image}">
@@ -64,6 +73,9 @@ function recipeInfo(id){
                 <h2>Directions</h2>
                 <a href="${arr[id].directions}"><button>Get Directions</button>
             </div>
+            <div class="tags">
+              <p></p>
+            </div>
         </article>
         </div>`
   
@@ -77,9 +89,14 @@ function recipeInfo(id){
             Sodium: ${arr[id].nutrition.NA.quantity} ${arr[id].nutrition.NA.unit}<br>
             Calcium: ${arr[id].nutrition.CA.quantity} ${arr[id].nutrition.CA.unit}`
 
+  for(let item of arr[id].health){
+    tag+=`#${item}  `
+  }        
+
   document.querySelector("#overlay").innerHTML=html;
   document.querySelector("#ingredients").innerHTML=ingredients;
   document.querySelector("#nutritionValues").innerHTML=nutrition;
+  document.querySelector(".tags").innerHTML=tag;
 }
 
 
@@ -116,6 +133,10 @@ async function filterRecipies(){
   searchResult(data); 
 }
 
+function captureFormDetails(){
+  alert("Your feedback was submitted.");
+}
+
 function viewRecipe(data){   
     recipeInfo(data);
     document.getElementById("overlay").style.display = "block";
@@ -125,11 +146,9 @@ function hideRecipe() {
 }
 
 
-let slideIndex = 0;
-showSlides(slideIndex);
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function playSlideshow(){
+  let slideIndex = 0;
+  showSlides(slideIndex);
 }
 
 function showSlides(n) {

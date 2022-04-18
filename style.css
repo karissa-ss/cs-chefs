@@ -38,6 +38,12 @@ footer{
   text-align: center;
 }
 
+footer img{
+  height: 19px;
+  padding: 0;
+  margin: 0;
+}
+
 header img{
   height: 110px;
 }
@@ -239,13 +245,28 @@ form textarea{
   grid-column: span 4;
   grid-row: span 1;
   height: max-content;
-  width: fit-content;
+  width: 60%;
 }
 
 #enterIngredient button[type="submit"]{
   color: var(--secondary);
   font-weight: bold;
   background-color: black;
+}
+
+#searchInput{
+  width: 60%;
+}
+
+#filter{
+  width: 28%;
+}
+
+.tags{
+  float: left;
+  color: black;
+  width: 100%;
+
 }
 
 #ingredientItem{

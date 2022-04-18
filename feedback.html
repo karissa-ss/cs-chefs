@@ -31,28 +31,28 @@
             <div class="formInstructions">
                 <h3>We value your feedback!</h3>
                 <br>
-                <p>Please fill out the form.</p>
+                <p>Please complete the form below.</p>
             </div>
-            <form action="action_page.php"> 
+            <form> 
                 <label for="name">
                     Name
-                    <input type="name"name="name">                                                 
+                    <input type="text" name="name">                                                 
                 </label>
                 <br>
                 <label for="email"> 
                     Email
-                    <input type="email" name="email" />
+                    <input type="email" name="email">
                 </label>
                 <br>   
                 <label for="comment">
                     Comment
-                    <textarea></textarea>
+                    <textarea id="comment"></textarea>
                 </label>  
                 <br> 
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" onclick="captureFormDetails()">
             </form>
         </div>
     </main>
 </body>
-<footer>Hello. I am the footer.</footer>
+<footer>CS Chefs© 2022</footer></footer>
 </html>
