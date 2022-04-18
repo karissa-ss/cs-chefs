@@ -61,6 +61,7 @@ header img{
 .navigation button{
   background-color: var(--secondary);
   border-radius: 20px;
+  font-size: 16px;
 }
 
 .navigation a{
@@ -171,13 +172,11 @@ label{
   text-align: justify;
 }
 
-form input[type=name], form input[type=email]{
-  width: 50%;
+form input[type=text], form input[type=email], textarea{
+  width: 100%;
+  display: flex;
 }
 
-form textarea{
-  width: 80%;
-}
 .details{
   text-align: left;
   height: auto;
@@ -227,7 +226,6 @@ form textarea{
   z-index: 2;
   cursor: pointer;
   overflow-y: auto;
-
 }
 
 .title{
@@ -246,6 +244,7 @@ form textarea{
   grid-row: span 1;
   height: max-content;
   width: 60%;
+  display: flex;
 }
 
 #enterIngredient button[type="submit"]{
@@ -394,18 +393,26 @@ main{
 }
 
 footer{
-  height: 25px;
+  height: 60px;
   position: relative;
   bottom: 0;
+}
+
+.slideshow{
+  max-height: 250px;
+}
+
+.slide img{
+  max-height: 250px;
+}
+
+#filter{
+  padding: 0;
 }
 
 .feedbackForm{
   width: 100%;
   margin: 0;
-}
-
-form input[type=name], form input[type=email], textarea{
-  width: 100%;
 }
 
 #recipe{
@@ -421,6 +428,18 @@ form input[type=name], form input[type=email], textarea{
 
 .card{
   grid-column: span 2;
+}
+
+.slideshow{
+  max-height: 350px;
+}
+
+.slide img{
+  max-height: 350px;
+}
+
+#enterIngredient{
+  width: 100%;
 }
 
 .feedbackForm{
